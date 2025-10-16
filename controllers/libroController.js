@@ -23,7 +23,7 @@ exports.registrarLibro = async (req, res) => {
 };
 
 exports.obtenerLibros = async (req, res) => {
-  const sql = `SELECT * FROM libros ORDER BY id_libro DESC`;
+  const sql = `SELECT * FROM libros ORDER BY id DESC`;
 
   try {
     const [libros] = await pool.query(sql);
